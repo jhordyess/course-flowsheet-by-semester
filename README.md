@@ -10,6 +10,8 @@ Using mouseover dynamically, the prerequisites and post requisites change of st
 
 To test your own course flowsheet, just modify the semesters.js file.
 
+This is the result using some example: [https://jhordyess.github.io/course-flowsheet-by-semester/](https://jhordyess.github.io/course-flowsheet-by-semester/)
+
 ---
 
 @2021 Jhordyess
