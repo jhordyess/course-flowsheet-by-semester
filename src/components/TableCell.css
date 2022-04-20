@@ -1,0 +1,50 @@
+td {
+  color: black;
+  background-color: white;
+  border: 1px solid darkgray;
+  height: 30px;
+  cursor: pointer;
+}
+td.td_empty {
+  border: 0px;
+  cursor: default;
+}
+td.td_hover {
+  color: white;
+  background-color: var(--hover-color);
+  border: 1px solid var(--hover-color);
+}
+td.td_prereq {
+  color: white;
+  background-color: var(--prereq-color);
+  animation: changeColorPre 0.25s;
+  border: 1px solid var(--prereq-color);
+}
+td.td_postreq {
+  color: white;
+  background-color: var(--postreq-color);
+  animation: changeColorPost 0.25s;
+  border: 1px solid var(--postreq-color);
+}
+
+@keyframes changeColorPre {
+  0% {
+    color: black;
+    background-color: white;
+  }
+  100% {
+    color: white;
+    background-color: var(--prereq-color);
+  }
+}
+
+@keyframes changeColorPost {
+  0% {
+    color: black;
+    background-color: white;
+  }
+  100% {
+    color: white;
+    background-color: var(--postreq-color);
+  }
+}

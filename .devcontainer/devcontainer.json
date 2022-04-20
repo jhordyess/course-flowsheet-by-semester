@@ -1,0 +1,13 @@
+{
+  "name": "frontend",
+  "dockerFile": "Dockerfile",
+  "extensions": [
+    "eg2.vscode-npm-script",
+    "esbenp.prettier-vscode",
+    "dsznajder.es7-react-js-snippets"
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "remoteUser": "node"
+}

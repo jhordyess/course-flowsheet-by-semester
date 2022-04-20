@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --primary-color: #1e90ff;
+  --hover-color: #4169e1;
+  --prereq-color: #cf830f;
+  --postreq-color: #307cf0;
+  --header-color: #34568b;
+}
