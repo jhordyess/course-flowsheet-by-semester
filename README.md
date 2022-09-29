@@ -12,6 +12,10 @@ To test your own course flowsheet, just modify the semesters.js file.
 
 This is the result using some example: [https://jhordyess.github.io/course-flowsheet-by-semester/](https://jhordyess.github.io/course-flowsheet-by-semester/)
 
+## License
+
+© 2022 [Jhordyess](https://github.com/jhordyess). Under the [MIT](https://choosealicense.com/licenses/mit/) license.
+
 ---
 
-@2021 Jhordyess
+Made with 💪 by [Jhordyess](https://www.jhordyess.com/)
