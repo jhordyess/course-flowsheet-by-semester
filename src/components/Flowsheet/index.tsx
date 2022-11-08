@@ -1,7 +1,11 @@
 import * as React from "react";
-import "./App.css";
+import "./index.css";
 
-import { getIdsObjt, getCoursesAsRows, getSemesters } from "./../data/utils";
+import {
+  getIdsObjt,
+  getCoursesAsRows,
+  getSemesters,
+} from "@data/example/semester";
 
 import TableCell from "./TableCell";
 
@@ -42,7 +46,7 @@ const TBody = () => {
   );
 };
 
-function App() {
+export default function () {
   return (
     <div className="container">
       <header>CURRICULUM</header>
@@ -52,12 +56,10 @@ function App() {
       </table>
       <footer>
         Made with 💪 by{" "}
-        <a href="https://jhordyess.com" target="_blank" rel="noreferrer">
+        <a href="https://www.jhordyess.com" target="_blank" rel="noreferrer">
           Jhordyess
         </a>
       </footer>
     </div>
   );
 }
-
-export default App;

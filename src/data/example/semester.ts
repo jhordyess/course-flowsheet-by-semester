@@ -1,8 +1,8 @@
 import type { Tsemesters, rowSemester, semesterB } from "./types";
-const semesters: Tsemesters[] = require("./example/semesters.json");
+const semesters: Tsemesters[] = require("./semesters.json");
 
 // Find postrequisites courses
-const findPostrequisites = (id: string) => {
+export const findPostrequisites = (id: string) => {
   let out: string[] = Array();
   semesters.forEach((semester) => {
     semester.courses.forEach((course) => {
@@ -16,7 +16,7 @@ const findPostrequisites = (id: string) => {
 };
 
 // Find prerequisites courses
-const findPrerequisites = (id: string) => {
+export const findPrerequisites = (id: string) => {
   let out: string[] = Array();
   semesters.forEach((semester) => {
     semester.courses.forEach((course) => {
@@ -28,7 +28,7 @@ const findPrerequisites = (id: string) => {
   return out;
 };
 
-const getIdsObjt = (): {} => {
+export const getIdsObjt = (): {} => {
   let out: any = {};
   semesters.forEach((semester) => {
     semester.courses.forEach((course) => {
@@ -49,9 +49,10 @@ const getMaxCourses = (): number => {
 };
 
 // Get semesters
-const getSemesters = (): string[] => semesters.map((semester) => semester.name);
+export const getSemesters = (): string[] =>
+  semesters.map((semester) => semester.name);
 
-const getCoursesAsRows = () => {
+export const getCoursesAsRows = () => {
   let row: rowSemester = [[]];
   for (let i = 0; i < getMaxCourses(); i++) {
     let obj = [];
@@ -66,12 +67,4 @@ const getCoursesAsRows = () => {
     row.push(obj);
   }
   return row;
-};
-
-export {
-  getIdsObjt,
-  findPostrequisites,
-  findPrerequisites,
-  getSemesters,
-  getCoursesAsRows,
 };
