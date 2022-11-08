@@ -12,9 +12,9 @@ To test your own course flowsheet, just modify the [semesters.json](/src/data/e
 
 This is the result using some example: <https://jhordyess.github.io/course-flowsheet-by-semester/>
 
-## Evolution from JQuery
+## Evolution from jQuery
 
-The original idea was started with JQuery when I starting in programming 😌, see the code and example: <https://github.com/jhordyess/course-flowsheet-by-semester-jquery>
+The original idea was started with jQuery when I starting in programming 😌, see the code and example: <https://github.com/jhordyess/course-flowsheet-by-semester-jquery>
 
 Now uses React with TypeScript, bundle with Webpack.
 
