@@ -8,26 +8,32 @@
   "version": "1.0.1",
   "scripts": {
     "start": "webpack serve --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.config.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jhordyess/course-flowsheet-by-semester.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "typescript",
+    "university"
+  ],
   "author": "Jhordy Gavinchu <dev@jhordyess.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jhordyess/course-flowsheet-by-semester/issues"
   },
-  "homepage": "https://github.com/jhordyess/course-flowsheet-by-semester#readme",
+  "homepage": "https://github.com/jhordyess/course-flowsheet-by-semester",
   "devDependencies": {
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.2.2",
+    "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
     "style-loader": "^3.3.1",

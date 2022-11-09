@@ -1,11 +1,7 @@
 import * as React from "react";
-import "./index.css";
+import "./style.css";
 
-import {
-  getIdsObjt,
-  getCoursesAsRows,
-  getSemesters,
-} from "@data/example/semester";
+import { getIdsObjt, getCoursesAsRows, getSemesters } from "@data/example";
 
 import TableCell from "./TableCell";
 

@@ -1,6 +1,6 @@
 import * as React from "react";
-import { findPostrequisites, findPrerequisites } from "@data/example/semester";
-import "./TableCell.css";
+import { findPostrequisites, findPrerequisites } from "@data/example";
+import "./style.css";
 
 type TDProps = {
   id: string;

@@ -10,3 +10,5 @@ npm i -D @types/react @types/react-dom
 npm i -D typescript ts-loader
 
 npm i -D css-minimizer-webpack-plugin terser-webpack-plugin clean-webpack-plugin
+
+npm i -D gh-pages
