@@ -12,9 +12,13 @@ To test your own course flowsheet, just modify the [semesters.json](/src/data/e
 
 This is the result using some example: <https://jhordyess.github.io/course-flowsheet-by-semester/>
 
-## Dockerize
+## Schreenshot
 
-Please review the [docker](https://github.com/jhordyess/course-flowsheet-by-semester/tree/docker) branch.
+![Home](https://res.cloudinary.com/jhordyess/image/upload/v1675257618/course-flowsheet-by-semester/home.png_ulf0pr.png)
+
+## Online
+
+See online: <https://jhordyess.github.io/course-flowsheet-by-semester>
 
 ## Dev Info
 
