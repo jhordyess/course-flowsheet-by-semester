@@ -14,7 +14,7 @@ This is the result using my example: <https://jhordyess.github.io/course-flowshe
 
 ### Technologies Used
 
-- JS Libraries: [ReactJS](https://reactjs.org/), [Lodash](https://lodash.com/), [Luxon](https://moment.github.io/luxon/)
+- JS Libraries: [ReactJS](https://reactjs.org/)
 - Programming Language: [TypeScript](https://www.typescriptlang.org/)
 - Font: [Lato, designed by Łukasz Dziedzic](https://fonts.google.com/specimen/Lato)
 - Bundler: [Webpack](https://webpack.js.org/)
