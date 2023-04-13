@@ -1,11 +1,14 @@
 {
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
   "name": "course-flowsheet-by-semester",
   "description": "This project represents one of my first steps in programming, approximately in 2017.",
   "version": "1.0.1",
+  "keywords": [
+    "react",
+    "typescript",
+    "university"
+  ],
+  "author": "Jhordy Gavinchu <dev@jhordyess.com>",
+  "license": "MIT",
   "scripts": {
     "start": "webpack serve --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
@@ -16,17 +19,14 @@
     "type": "git",
     "url": "git+https://github.com/jhordyess/course-flowsheet-by-semester.git"
   },
-  "keywords": [
-    "react",
-    "typescript",
-    "university"
-  ],
-  "author": "Jhordy Gavinchu <dev@jhordyess.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jhordyess/course-flowsheet-by-semester/issues"
   },
   "homepage": "https://github.com/jhordyess/course-flowsheet-by-semester",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
