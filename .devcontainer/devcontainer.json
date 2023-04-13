@@ -4,7 +4,9 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "dsznajder.es7-react-js-snippets",
+        "WallabyJs.console-ninja"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh"
