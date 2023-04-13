@@ -11,3 +11,32 @@ body {
   --postreq-color: #307cf0;
   --header-color: #34568b;
 }
+
+div.container {
+  padding: 6px 12px;
+}
+
+div.container main h1 {
+  text-align: center;
+  padding: 6px;
+  font-weight: bold;
+  font-size: larger;
+  color: var(--header-color);
+}
+
+div.container > footer > a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+div.container > footer > a:hover {
+  color: var(--hover-color);
+}
+
+div.container > footer {
+  margin-top: 18px;
+  padding-top: 8px;
+  border-top: 1px solid var(--primary-color);
+  text-align: center;
+}

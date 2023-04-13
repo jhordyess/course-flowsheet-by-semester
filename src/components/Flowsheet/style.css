@@ -1,34 +1,10 @@
-div.container {
-  padding: 6px 12px;
-}
-div.container header {
-  text-align: center;
-  padding: 6px;
-  font-weight: bold;
-  font-size: larger;
-  color: var(--header-color);
-}
-div.container table {
+table {
   text-align: center;
   border-spacing: 5px;
   width: 100%;
 }
-div.container th {
+th {
   background-color: var(--primary-color);
   height: 35px;
   color: white;
-}
-div.container > footer {
-  margin-top: 18px;
-  padding-top: 8px;
-  border-top: 1px solid var(--primary-color);
-  text-align: center;
-}
-div.container > footer > a {
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--primary-color);
-}
-div.container > footer > a:hover {
-  color: var(--hover-color);
 }

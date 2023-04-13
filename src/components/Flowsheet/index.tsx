@@ -44,18 +44,9 @@ const TBody = () => {
 
 export default function () {
   return (
-    <div className="container">
-      <header>CURRICULUM</header>
-      <table>
-        <THead />
-        <TBody />
-      </table>
-      <footer>
-        Made with 💪 by{" "}
-        <a href="https://www.jhordyess.com" target="_blank" rel="noreferrer">
-          Jhordyess
-        </a>
-      </footer>
-    </div>
+    <table>
+      <THead />
+      <TBody />
+    </table>
   );
 }
