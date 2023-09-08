@@ -1,11 +1,11 @@
-import Flowsheet from '@/components/Flowsheet'
+import FlowSheet from '@/components/FlowSheet'
 
 export default function Home() {
   return (
     <div className="container">
       <main>
-        <h1>Front-end developer curriculum</h1>
-        <Flowsheet />
+        <h1>Frontend developer curriculum</h1>
+        <FlowSheet />
       </main>
       <footer>
         Made with 💪 by&nbsp;

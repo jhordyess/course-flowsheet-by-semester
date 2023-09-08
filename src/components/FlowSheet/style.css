@@ -3,6 +3,7 @@ table {
   border-spacing: 5px;
   width: 100%;
 }
+
 th {
   background-color: var(--primary-color);
   height: 35px;
