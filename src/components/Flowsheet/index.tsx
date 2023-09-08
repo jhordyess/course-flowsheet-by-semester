@@ -1,9 +1,9 @@
-import "./style.css";
+import './style.css'
 
-import { getIdsObjt, getCoursesAsRows, getSemesters } from "@/data/example";
+import { getIdsObjt, getCoursesAsRows, getSemesters } from '@/data/example'
 
-import TableCell from "./TableCell";
-import { useState } from "react";
+import TableCell from './TableCell'
+import { useState } from 'react'
 
 const THead = () => (
   <thead>
@@ -13,12 +13,10 @@ const THead = () => (
       ))}
     </tr>
   </thead>
-);
+)
 
 const TBody = () => {
-  const [tdsClass, setTdsClass] = useState<Record<string, string>>(
-    getIdsObjt()
-  );
+  const [tdsClass, setTdsClass] = useState<Record<string, string>>(getIdsObjt())
 
   return (
     <tbody>
@@ -41,8 +39,8 @@ const TBody = () => {
         </tr>
       ))}
     </tbody>
-  );
-};
+  )
+}
 
 export default function () {
   return (
@@ -50,5 +48,5 @@ export default function () {
       <THead />
       <TBody />
     </table>
-  );
+  )
 }

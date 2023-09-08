@@ -1,4 +1,4 @@
-import Flowsheet from "@/components/Flowsheet";
+import Flowsheet from '@/components/Flowsheet'
 
 export default function () {
   return (
@@ -13,13 +13,10 @@ export default function () {
           Jhordyess
         </a>
         <br />
-        <a
-          href="https://github.com/jhordyess/course-flowsheet-by-semester"
-          target="_blank"
-        >
+        <a href="https://github.com/jhordyess/course-flowsheet-by-semester" target="_blank">
           👉 View on GitHub
         </a>
       </footer>
     </div>
-  );
+  )
 }
