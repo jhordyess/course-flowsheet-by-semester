@@ -5,17 +5,17 @@ type TDProps = {
   id: string
   text: string
   tdClass: string
-  tdsClass: any
-  setTdsClass: any
+  tdsClass: Record<string, string>
+  setTdsClass: (tdsClass: Record<string, string>) => void
 }
 
-const TD = ({ id, text, tdClass, tdsClass, setTdsClass }: TDProps) => {
+export default function TD({ id, text, tdClass, tdsClass, setTdsClass }: TDProps) {
   const handleIn = () => {
     findPostrequisites(id).forEach(value => {
       tdsClass[value] = 'td_postreq'
     })
     tdsClass[id] = 'td_hover'
-    let pre = findPrerequisites(id)
+    const pre = findPrerequisites(id)
     pre.forEach(value => {
       tdsClass[value] = 'td_prereq'
     })
@@ -27,7 +27,7 @@ const TD = ({ id, text, tdClass, tdsClass, setTdsClass }: TDProps) => {
       tdsClass[value] = ''
     })
     tdsClass[id] = ''
-    let pre = findPrerequisites(id)
+    const pre = findPrerequisites(id)
     pre.forEach(value => {
       tdsClass[value] = ''
     })
@@ -40,5 +40,3 @@ const TD = ({ id, text, tdClass, tdsClass, setTdsClass }: TDProps) => {
     </td>
   )
 }
-
-export default TD

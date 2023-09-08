@@ -42,7 +42,7 @@ const TBody = () => {
   )
 }
 
-export default function () {
+export default function Flowsheet() {
   return (
     <table>
       <THead />

@@ -1,6 +1,6 @@
 import Flowsheet from '@/components/Flowsheet'
 
-export default function () {
+export default function Home() {
   return (
     <div className="container">
       <main>

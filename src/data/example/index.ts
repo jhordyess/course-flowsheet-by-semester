@@ -14,7 +14,7 @@ const semesters: Tsemesters[] = await fetchSemesters()
 
 // Find postrequisites courses
 export const findPostrequisites = (id: string) => {
-  const out: string[] = Array()
+  const out: string[] = []
   semesters.forEach(semester => {
     semester.courses.forEach(course => {
       if (typeof course.prerequisites != 'undefined')
@@ -28,7 +28,7 @@ export const findPostrequisites = (id: string) => {
 
 // Find prerequisites courses
 export const findPrerequisites = (id: string) => {
-  let out: string[] = Array()
+  let out: string[] = []
   semesters.forEach(semester => {
     semester.courses.forEach(course => {
       if (course.id === id && typeof course.prerequisites != 'undefined') {
@@ -40,7 +40,7 @@ export const findPrerequisites = (id: string) => {
 }
 
 export const getIdsObjt = (): Record<string, string> => {
-  let out: Record<string, string> = {}
+  const out: Record<string, string> = {}
   semesters.forEach(semester => {
     semester.courses.forEach(course => {
       out[course.id] = ''
@@ -53,7 +53,7 @@ export const getIdsObjt = (): Record<string, string> => {
 const getMaxCourses = (): number => {
   let max = 0
   semesters.forEach(semester => {
-    let len = semester.courses.length
+    const len = semester.courses.length
     max = max > len ? max : len
   })
   return max
@@ -63,9 +63,9 @@ const getMaxCourses = (): number => {
 export const getSemesters = (): string[] => semesters.map(semester => semester.name)
 
 export const getCoursesAsRows = () => {
-  let row: rowSemester = [[]]
+  const row: rowSemester = [[]]
   for (let i = 0; i < getMaxCourses(); i++) {
-    let obj = []
+    const obj = []
     for (let j = 0; j < semesters.length; j++) {
       const course = semesters[j].courses[i]
       obj.push(
