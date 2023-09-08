@@ -1,5 +1,4 @@
-import * as React from "react";
-import { findPostrequisites, findPrerequisites } from "@data/example";
+import { findPostrequisites, findPrerequisites } from "@/data/example";
 import "./style.css";
 
 type TDProps = {

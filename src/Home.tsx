@@ -1,5 +1,4 @@
-import Flowsheet from "@components/Flowsheet";
-import * as React from "react";
+import Flowsheet from "@/components/Flowsheet";
 
 export default function () {
   return (

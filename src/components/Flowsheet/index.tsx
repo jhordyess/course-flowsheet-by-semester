@@ -1,9 +1,9 @@
-import * as React from "react";
 import "./style.css";
 
-import { getIdsObjt, getCoursesAsRows, getSemesters } from "@data/example";
+import { getIdsObjt, getCoursesAsRows, getSemesters } from "@/data/example";
 
 import TableCell from "./TableCell";
+import { useState } from "react";
 
 const THead = () => (
   <thead>
@@ -16,7 +16,9 @@ const THead = () => (
 );
 
 const TBody = () => {
-  const [tdsClass, setTdsClass] = React.useState<any>(getIdsObjt());
+  const [tdsClass, setTdsClass] = useState<Record<string, string>>(
+    getIdsObjt()
+  );
 
   return (
     <tbody>

@@ -1,20 +1,18 @@
-type Tsemesters = {
+export type Tsemesters = {
   name: string;
   courses: semester[];
 };
 
-type semester = {
+export type semester = {
   id: string;
   name: string;
   prerequisites: string[] | undefined;
 };
 
-type rowSemester = [semesterB[]];
+export type rowSemester = [semesterB[]];
 
-type semesterB = {
-  id: string | undefined;
-  name: string | undefined;
+export type semesterB = {
+  id: string;
+  name: string;
   empty: boolean;
 };
-
-export { Tsemesters, semester, rowSemester, semesterB };

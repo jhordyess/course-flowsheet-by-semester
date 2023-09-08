@@ -1,18 +1,13 @@
 {
   "name": "course-flowsheet-by-semester",
-  "image": "jhordyess/node",
+  "image": "jhordyess/node:18",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "esbenp.prettier-vscode",
-        "dsznajder.es7-react-js-snippets",
-        "WallabyJs.console-ninja"
-      ],
+      "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh"
       }
     }
   },
-  "postCreateCommand": "bash config.sh",
-  "remoteUser": "node"
+  "postCreateCommand": "sudo npm i npm -g && yarn"
 }

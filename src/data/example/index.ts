@@ -1,9 +1,20 @@
-import type { Tsemesters, rowSemester, semesterB } from "./types";
-const semesters: Tsemesters[] = require("./semesters.json");
+import type { Tsemesters, rowSemester } from "./types";
+
+const fetchSemesters = async (): Promise<Tsemesters[]> => {
+  try {
+    const response = await fetch("/semesters.json");
+    const json: Tsemesters[] = await response.json();
+    return json;
+  } catch {
+    return [];
+  }
+};
+
+const semesters: Tsemesters[] = await fetchSemesters();
 
 // Find postrequisites courses
 export const findPostrequisites = (id: string) => {
-  let out: string[] = Array();
+  const out: string[] = Array();
   semesters.forEach((semester) => {
     semester.courses.forEach((course) => {
       if (typeof course.prerequisites != "undefined")
@@ -28,8 +39,8 @@ export const findPrerequisites = (id: string) => {
   return out;
 };
 
-export const getIdsObjt = (): {} => {
-  let out: any = {};
+export const getIdsObjt = (): Record<string, string> => {
+  let out: Record<string, string> = {};
   semesters.forEach((semester) => {
     semester.courses.forEach((course) => {
       out[course.id] = "";
@@ -61,7 +72,7 @@ export const getCoursesAsRows = () => {
       obj.push(
         typeof course != "undefined"
           ? { id: course.id, name: course.name, empty: false }
-          : { id: undefined, name: undefined, empty: true }
+          : { id: "", name: "", empty: true }
       );
     }
     row.push(obj);
