@@ -1,10 +1,10 @@
 [
   {
-    "name": "1st semester",
+    "name": "1st Semester",
     "courses": [
       {
         "id": "fro-100",
-        "name": "Programming Fundamentals"
+        "name": "Introduction to Programming"
       },
       {
         "id": "fro-101",
@@ -20,16 +20,16 @@
       },
       {
         "id": "fro-104",
-        "name": "Logical thinking and Reasoning"
+        "name": "Logical Thinking and Reasoning"
       }
     ]
   },
   {
-    "name": "2nd semester",
+    "name": "2nd Semester",
     "courses": [
       {
         "id": "fro-200",
-        "name": "Programming with JavaScript",
+        "name": "JavaScript Programming",
         "prerequisites": ["fro-100", "fro-104"]
       },
       {
@@ -49,42 +49,42 @@
     ]
   },
   {
-    "name": "3rd semester",
+    "name": "3rd Semester",
     "courses": [
       {
         "id": "fro-300",
-        "name": "Libraries, Packagers and Build Systems",
+        "name": "Libraries, Package Management, and Build Systems",
         "prerequisites": ["fro-101"]
       },
       {
         "id": "fro-301",
-        "name": "Web security",
+        "name": "Web Security",
         "prerequisites": ["fro-101", "fro-103"]
       },
       {
         "id": "fro-302",
-        "name": "Responsive and Accessibility Design",
+        "name": "Responsive and Accessible Design",
         "prerequisites": ["fro-203"]
       },
       {
         "id": "fro-303",
-        "name": "SEO and Performance principles",
+        "name": "SEO and Performance Principles",
         "prerequisites": ["fro-203", "fro-103"]
       },
       {
         "id": "opt-01",
-        "name": "Opt. I - Data Structures and Algorithms",
+        "name": "Optional I - Data Structures and Algorithms",
         "prerequisites": ["fro-100", "fro-104", "fro-200"]
       },
       {
         "id": "opt-02",
-        "name": "Opt. II - Design Patterns",
+        "name": "Optional II - Design Patterns",
         "prerequisites": ["fro-100", "fro-104", "fro-200"]
       }
     ]
   },
   {
-    "name": "4th semester",
+    "name": "4th Semester",
     "courses": [
       {
         "id": "fro-400",
@@ -98,34 +98,27 @@
       },
       {
         "id": "fro-402",
-        "name": "Code interview and developer portfolio",
+        "name": "Code Interview and Developer Portfolio",
         "prerequisites": ["fro-102", "fro-204"]
       },
       {
         "id": "fro-403",
         "name": "Testing and Debugging",
-        "prerequisites": [
-          "fro-300",
-          "fro-200",
-          "fro-203",
-          "fro-101",
-          "fro-104",
-          "fro-201"
-        ]
+        "prerequisites": ["fro-300", "fro-200", "fro-203", "fro-101", "fro-104", "fro-201"]
       },
       {
         "id": "jslib-01",
-        "name": "React specialization",
+        "name": "React Specialization",
         "prerequisites": ["fro-300", "fro-203", "fro-200"]
       },
       {
         "id": "jslib-02",
-        "name": "Angular specialization",
+        "name": "Angular Specialization",
         "prerequisites": ["fro-300", "fro-203", "fro-200"]
       },
       {
         "id": "jslib-03",
-        "name": "Vue specialization",
+        "name": "Vue Specialization",
         "prerequisites": ["fro-300", "fro-203", "fro-200"]
       }
     ]
