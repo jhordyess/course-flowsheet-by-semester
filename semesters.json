@@ -1,0 +1,126 @@
+[
+  {
+    "name": "1st Semester",
+    "courses": [
+      {
+        "id": "fro-100",
+        "name": "Introduction to Programming"
+      },
+      {
+        "id": "fro-101",
+        "name": "Linux and Command Line Management"
+      },
+      {
+        "id": "fro-102",
+        "name": "English for Software Development"
+      },
+      {
+        "id": "fro-103",
+        "name": "Internet and Web Technologies"
+      },
+      {
+        "id": "fro-104",
+        "name": "Logical Thinking and Reasoning"
+      }
+    ]
+  },
+  {
+    "name": "2nd Semester",
+    "courses": [
+      {
+        "id": "fro-200",
+        "name": "JavaScript Programming",
+        "prerequisites": ["fro-100", "fro-104"]
+      },
+      {
+        "id": "fro-201",
+        "name": "Version Control Systems",
+        "prerequisites": ["fro-101"]
+      },
+      {
+        "id": "fro-203",
+        "name": "HTML and CSS Fundamentals",
+        "prerequisites": ["fro-103", "fro-104"]
+      },
+      {
+        "id": "fro-204",
+        "name": "Overcoming Imposter Syndrome"
+      }
+    ]
+  },
+  {
+    "name": "3rd Semester",
+    "courses": [
+      {
+        "id": "fro-300",
+        "name": "Libraries, Package Management, and Build Systems",
+        "prerequisites": ["fro-101"]
+      },
+      {
+        "id": "fro-301",
+        "name": "Web Security",
+        "prerequisites": ["fro-101", "fro-103"]
+      },
+      {
+        "id": "fro-302",
+        "name": "Responsive and Accessible Design",
+        "prerequisites": ["fro-203"]
+      },
+      {
+        "id": "fro-303",
+        "name": "SEO and Performance Principles",
+        "prerequisites": ["fro-203", "fro-103"]
+      },
+      {
+        "id": "opt-01",
+        "name": "Optional I - Data Structures and Algorithms",
+        "prerequisites": ["fro-100", "fro-104", "fro-200"]
+      },
+      {
+        "id": "opt-02",
+        "name": "Optional II - Design Patterns",
+        "prerequisites": ["fro-100", "fro-104", "fro-200"]
+      }
+    ]
+  },
+  {
+    "name": "4th Semester",
+    "courses": [
+      {
+        "id": "fro-400",
+        "name": "Advanced JavaScript",
+        "prerequisites": ["fro-200", "fro-203"]
+      },
+      {
+        "id": "fro-401",
+        "name": "TypeScript",
+        "prerequisites": ["fro-200", "fro-203"]
+      },
+      {
+        "id": "fro-402",
+        "name": "Code Interview and Developer Portfolio",
+        "prerequisites": ["fro-102", "fro-204"]
+      },
+      {
+        "id": "fro-403",
+        "name": "Testing and Debugging",
+        "prerequisites": ["fro-300", "fro-200", "fro-203", "fro-101", "fro-104", "fro-201"]
+      },
+      {
+        "id": "jslib-01",
+        "name": "React Specialization",
+        "prerequisites": ["fro-300", "fro-203", "fro-200"]
+      },
+      {
+        "id": "jslib-02",
+        "name": "Angular Specialization",
+        "prerequisites": ["fro-300", "fro-203", "fro-200"]
+      },
+      {
+        "id": "jslib-03",
+        "name": "Vue Specialization",
+        "prerequisites": ["fro-300", "fro-203", "fro-200"]
+      }
+    ]
+  }
+]
