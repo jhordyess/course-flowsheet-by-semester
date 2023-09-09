@@ -1,18 +1,12 @@
 import type { Semester, rowSemester } from './types'
 
-const fetchSemesters = async (): Promise<Semester[]> => {
-  try {
-    const response = await fetch('/semesters.json')
-    const json: Semester[] = await response.json()
-    return json
-  } catch {
-    return []
-  }
-}
-
-const allSemesters: Semester[] = await fetchSemesters()
-
-export const findPostrequisites = (courseId: string): string[] => {
+/**
+ * Finds all courses that have the given course as a prerequisite.
+ * @param allSemesters - An array of all semesters.
+ * @param courseId - The ID of the course to find postrequisites for.
+ * @returns An array of course IDs that have the given course as a prerequisite.
+ */
+export const findPostrequisites = (allSemesters: Semester[], courseId: string): string[] => {
   const postrequisiteCourses: string[] = []
   allSemesters.forEach(semester => {
     semester.courses.forEach(targetCourse => {
@@ -24,14 +18,25 @@ export const findPostrequisites = (courseId: string): string[] => {
   return postrequisiteCourses
 }
 
-export const findPrerequisites = (courseId: string): string[] => {
+/**
+ * Finds the prerequisites for a given course.
+ * @param allSemesters - An array of all semesters.
+ * @param courseId - The ID of the course to find prerequisites for.
+ * @returns An array of course IDs that are prerequisites for the given course.
+ */
+export const findPrerequisites = (allSemesters: Semester[], courseId: string): string[] => {
   const targetCourse = allSemesters
     .flatMap(semester => semester.courses)
     .find(course => course.id === courseId)
   return targetCourse?.prerequisites ?? []
 }
 
-export const getAllCourseIds = (): Record<string, string> => {
+/**
+ * Gets all course IDs from an array of semesters.
+ * @param allSemesters - An array of all semesters.
+ * @returns An object with all course IDs as keys and empty strings as values.
+ */
+export const getAllCourseIds = (allSemesters: Semester[]): Record<string, string> => {
   const allCourseIds: Record<string, string> = {}
   allSemesters.forEach(semester => {
     semester.courses.forEach(course => {
@@ -41,18 +46,33 @@ export const getAllCourseIds = (): Record<string, string> => {
   return allCourseIds
 }
 
-export const getMaxCoursesInAnySemester = (): number => {
+/**
+ * Gets the maximum number of courses in any semester.
+ * @param allSemesters - An array of all semesters.
+ * @returns The maximum number of courses in any semester.
+ */
+export const getMaxCoursesInAnySemester = (allSemesters: Semester[]): number => {
   return allSemesters.reduce((max, semester) => {
     return Math.max(max, semester.courses.length)
   }, 0)
 }
 
-export const getAllSemesterNames = (): string[] => {
+/**
+ * Gets the names of all semesters.
+ * @param allSemesters - An array of all semesters.
+ * @returns An array of semester names.
+ */
+export const getAllSemesterNames = (allSemesters: Semester[]): string[] => {
   return allSemesters.map(semester => semester.name)
 }
 
-export const getCoursesAsRows = (): rowSemester => {
-  const maxCoursesInAnySemester = getMaxCoursesInAnySemester()
+/**
+ * Gets an array of semesters, where each semester is represented as an array of course rows.
+ * @param allSemesters - An array of all semesters.
+ * @returns An array of semesters, where each semester is represented as an array of course rows.
+ */
+export const getCoursesAsRows = (allSemesters: Semester[]): rowSemester => {
+  const maxCoursesInAnySemester = getMaxCoursesInAnySemester(allSemesters)
   const courseRows: rowSemester = [[]]
   for (let i = 0; i < maxCoursesInAnySemester; i++) {
     const semesterCourses = allSemesters.map(semester => {

@@ -4,10 +4,14 @@ import { useState } from 'react'
 
 export default function TBody({
   coursesIds,
-  coursesAsRows
+  coursesAsRows,
+  findPostrequisites,
+  findPrerequisites
 }: {
   coursesIds: Record<string, string>
   coursesAsRows: rowSemester
+  findPostrequisites: (courseId: string) => string[]
+  findPrerequisites: (courseId: string) => string[]
 }) {
   const [cellClassMap, setCellClassMap] = useState<Record<string, string>>(coursesIds)
 
@@ -26,6 +30,8 @@ export default function TBody({
                 text={item.name}
                 cellClassMap={cellClassMap}
                 setCellClassMap={setCellClassMap}
+                findPostrequisites={findPostrequisites}
+                findPrerequisites={findPrerequisites}
               />
             )
           )}
