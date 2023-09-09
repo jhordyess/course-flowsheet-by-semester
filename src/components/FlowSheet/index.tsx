@@ -29,7 +29,7 @@ export default function FlowSheet() {
   useEffect(() => {
     async function fetchSemesters() {
       try {
-        const response = await fetch('/semesters.json')
+        const response = await fetch('semesters.json')
         const json: Semester[] = await response.json()
         setSemesters(json)
       } catch {
