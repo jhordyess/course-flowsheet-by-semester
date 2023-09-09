@@ -8,7 +8,7 @@ It's a React component for a dynamic course flowsheet by semester, identifying a
 
 Using mouseover dynamically, the prerequisites and post requisites change their style.
 
-To test your own course flowsheet, just modify the [semesters.json](/src/data/example/semesters.json) file.
+To test your own course flowsheet, just modify the [semesters.json](./public/semesters.json) file.
 
 This is the result using my example: <https://jhordyess.github.io/course-flowsheet-by-semester/>
 
@@ -17,13 +17,13 @@ This is the result using my example: <https://jhordyess.github.io/course-flowshe
 - JS Libraries: [ReactJS](https://reactjs.org/)
 - Programming Language: [TypeScript](https://www.typescriptlang.org/)
 - Font: [Lato, designed by Łukasz Dziedzic](https://fonts.google.com/specimen/Lato)
-- Bundler: [Webpack](https://webpack.js.org/)
+- Build tool: [Vite](https://vitejs.dev/)
 - Hosting: [GitHub Pages](https://pages.github.com/)
 - Dev Environment: [VSCode](https://code.visualstudio.com/) with [dev containers](https://code.visualstudio.com/docs/remote/containers) in [Zorin OS](https://zorinos.com/)
 
-### Online
+### Demo
 
-Visit the project at: <https://jhordyess.github.io/course-flowsheet-by-semester>
+You can see the demo here: <https://jhordyess.github.io/course-flowsheet-by-semester/>
 
 ### Screenshot
 
@@ -32,6 +32,68 @@ Visit the project at: <https://jhordyess.github.io/course-flowsheet-by-semester>
 ### Evolution from jQuery
 
 The original idea was started with jQuery when I starting in programming 😌, see the code and example: <https://github.com/jhordyess/course-flowsheet-by-semester-jquery>
+
+## How to use
+
+1. Clone the repository:
+
+```bash
+git clone git@github.com:jhordyess/course-flowsheet-by-semester.git
+```
+
+2. Open the project folder:
+
+```bash
+cd course-flowsheet-by-semester
+```
+
+3. Install the dependencies:
+
+```bash
+yarn
+```
+
+4. Run the project:
+
+```bash
+yarn dev
+```
+
+5. Open the browser at <http://localhost:5173/course-flowsheet-by-semester/>
+
+6. Modify the [semesters.json](./public/semesters.json) file to test your own course flowsheet.
+
+## How to use with VSCode dev containers
+
+You can use the VSCode dev containers to run the project in a containerized environment.
+
+You need to have installed [Docker](https://www.docker.com/) and [VSCode](https://code.visualstudio.com/), and the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
+
+1. Clone the repository:
+
+```bash
+git clone git@github.com:jhordyess/course-flowsheet-by-semester.git
+```
+
+2. Open the project with VSCode:
+
+```bash
+code course-flowsheet-by-semester
+```
+
+3. Open the command palette and select the option `Dev Containers: Reopen in Container`.
+
+4. Wait for the container to be built and the project to be started.
+
+5. Open the terminal in VSCode and run the project:
+
+```bash
+yarn dev
+```
+
+6. Open the browser at <http://localhost:5173/course-flowsheet-by-semester/>
+
+7. Modify the [semesters.json](./public/semesters.json) file to test your own course flowsheet.
 
 ## To-Do
 
