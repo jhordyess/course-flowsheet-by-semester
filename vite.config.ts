@@ -8,5 +8,6 @@ export default defineConfig({
     alias: {
       '@': '/src'
     }
-  }
+  },
+  base: '/course-flowsheet-by-semester/'
 })
