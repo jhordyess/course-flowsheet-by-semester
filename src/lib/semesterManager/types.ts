@@ -6,13 +6,12 @@ export type Semester = {
 type Course = {
   id: string
   name: string
-  prerequisites: string[] | undefined
+  requires?: string[]
 }
 
-export type rowSemester = [
-  {
-    id: string
-    name: string
-    empty: boolean
-  }[]
-]
+export type rowSemester = Array<
+  Array<{
+    id?: string
+    name?: string
+  }>
+>

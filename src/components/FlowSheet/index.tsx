@@ -4,8 +4,7 @@ import {
   getAllCourseIds,
   getCoursesAsRows,
   getAllSemesterNames,
-  findPostrequisites,
-  findPrerequisites
+  forEachDependencies
 } from '@/lib/semesterManager'
 
 import THead from './THead'
@@ -22,9 +21,11 @@ export default function FlowSheet() {
 
   const coursesAsRows = getCoursesAsRows(semesters)
 
-  const findPostrequisitesHOF = (courseId: string) => findPostrequisites(semesters, courseId)
-
-  const findPrerequisitesHOF = (courseId: string) => findPrerequisites(semesters, courseId)
+  const forEachDependenciesHOF = (
+    targetCourseId: string,
+    forEachRequiredFor: (courseId: string) => void,
+    forEachRequires: (courseId: string) => void
+  ) => forEachDependencies(semesters, targetCourseId, forEachRequiredFor, forEachRequires)
 
   useEffect(() => {
     async function fetchSemesters() {
@@ -45,8 +46,7 @@ export default function FlowSheet() {
       <TBody
         coursesAsRows={coursesAsRows}
         coursesIds={coursesIds}
-        findPostrequisites={findPostrequisitesHOF}
-        findPrerequisites={findPrerequisitesHOF}
+        forEachDependencies={forEachDependenciesHOF}
       />
     </table>
   )

@@ -2,15 +2,15 @@
 
 This project represents one of my first steps in programming, approximately in  2017 🤓.
 
-It's a React component for a dynamic course flowsheet by semester, identifying all prerequisites or postrequisites.
+React app for visualizing your academic path by semester, identifying course dependencies ('requires' and 'required for').
 
 ## Description
 
-Using mouseover dynamically, the prerequisites and post requisites change their style.
+This project was born from the need to visualize the courses of my career by semester, identifying the dependencies between them.
 
-To test your own course flowsheet, just modify the [semesters.json](./public/semesters.json) file.
+When you hover over a course, you can see the courses that require it and the courses that it requires. This is useful to know which courses you can take in the next semester.
 
-This is the result using my example: <https://jhordyess.github.io/course-flowsheet-by-semester/>
+The data is loaded from a [JSON file](./public/semesters.json), which contains the courses and their dependencies, feel free to modify it to test your own course flowsheet.
 
 ### Technologies Used
 
@@ -23,7 +23,7 @@ This is the result using my example: <https://jhordyess.github.io/course-flowshe
 
 ### Demo
 
-You can see the demo here: <https://jhordyess.github.io/course-flowsheet-by-semester/>
+You can see the demo for a frontend developer career here: <https://jhordyess.github.io/course-flowsheet-by-semester/>
 
 ### Screenshot
 
